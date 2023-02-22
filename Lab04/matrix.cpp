@@ -49,28 +49,76 @@ void matrix::addMatrix(){
 double matrix::getMax(){
 	//TO DO
 	double max_element = 0;
+	for ( int i = 0; i < rows; i++ )
+	{
+		for ( int j = 0; j < cols; j++ )
+		{
+			if ( grid[i][j] > max_element )
+			{
+				max_element = grid[i][j];
+			}
+		}
+	}
 	return max_element;
 }
 
 bool matrix::findElement(int no){
 	//TO DO
+	for ( int i = 0; i < rows; i++ )
+	{
+		for ( int j = 0; j < cols; j++ )
+		{
+			if ( no == grid[i][j] )
+			{
+				std::cout << "Element Found At: " << i << ", " << j << '\n';
+				return true;
+			}
+		}
+	}
 	std::cout<<"\nElement not found\n";
 	return false;
 }
 
 void matrix::changeElement(int r, int c, int no){
 	//TO DO
+	if ( r < rows && c < cols && r >= 0 && c >= 0 )
+	{
+		grid[r][c] = no;
+	}
+	else
+		std::cout<<"invalid index\n";
 	return;
 }
 void matrix::multiplyMatrix(){
 	//TO DO
 	//Hint: May want to store the new result in grid_temp and print that matrix
+	for ( int i = 0; i < rows; i++ )
+	{
+		for ( int j = 0; j < cols; j++ )
+		{
+			for ( int x = 0; x < cols; x++ )
+			{
+				grid_temp[i][j] += grid[i][x] * grid[x][j];
+			}
+		}
+	}
+	grid = grid_temp;
+	printMatrix();
 	return;
 }
 
 void matrix::transposeMatrix(){
 	//TO DO
 	//Hint: May want to store the new results in grid_temp and print that matrix
+	for ( int i = 0; i < rows; i++ )
+	{
+		for ( int j = 0; j < cols; j++ )
+		{
+			grid_temp[i][j] = grid[j][i];
+		}
+	}
+	grid = grid_temp;
+	printMatrix();
 	return;
 }
 matrix::~matrix(){
