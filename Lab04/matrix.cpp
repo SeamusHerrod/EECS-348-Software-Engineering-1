@@ -102,8 +102,14 @@ void matrix::multiplyMatrix(){
 			}
 		}
 	}
-	grid = grid_temp;
-	printMatrix();
+	for ( int i = 0; i < rows; i++ )
+	{
+		for ( int j = 0; j < cols; j++ )
+		{
+			std::cout << grid_temp[i][j] << '\t';
+		}
+		std::cout << std::endl;
+	}
 	return;
 }
 
@@ -117,8 +123,15 @@ void matrix::transposeMatrix(){
 			grid_temp[i][j] = grid[j][i];
 		}
 	}
-	grid = grid_temp;
-	printMatrix();
+	for ( int i = 0; i < rows; i++ )
+	{
+		for ( int j = 0; j < cols; j++ )
+		{
+			std::cout << grid_temp[i][j] << '\t';
+		}
+		std::cout << std::endl;
+	}
+	
 	return;
 }
 matrix::~matrix(){
