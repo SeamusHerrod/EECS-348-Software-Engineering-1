@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang = "en"><!--set language of site to english-->
 <head>
-    <meta charset = "utf-8"><!--set charset to utf-8-->
-    <meta http-equiv="X-UA-Compatible" content = "IE=edge"> <!--for compatibility with older browsers, in particular, Internet Explorer-->
-    <meta name = "Viewport" content = "width=device-width, initial-scale=1.0, user-scalable=yes"><!--sets size and scale of content on page, user-scalable=yes allows user to zoom in-->
-    <title>HomePage</title>
-        <link rel="stylesheet" href="main.css"><!--provide link to main.css with relation stylesheet-->
-        <style> @import url('https://fonts.cdnfonts.com/css/sf-mono'); </style><!--import SF Mono font-->
+	Practice 2
 </head>
 
+<style>
+	#dummyText{
+		position: relative;
+		padding: 0px;
+		border-style: solid;
+		border-width: 5px;
+		
+	}
+</style>
 <body>
-	<p id = "dummyText" border= "solid-black">
+	<div id = "dummyText">
 		"this is the dummy text"
-	</p>
-	<form>
-	   <label for = "fontColor">Font Color:</label><br>
-	   <input type = "text" id = "fontColor" name="fontColor"><br>
-	   <label for = "borderColor">Border Color:</label><br>
-	   <input type = "text" id = "borderColor" name = "borderColor"><br>
-	   <input id = "changeColor" value="Submit" type="button">
+	</div>
 
-	</form>
+		<script type="text/javascript" src="prac2.js"></script>
+		Enter values between 0-255 for colors<br>
+		enter values greater than or equal to 0 for width<br>
+		font R: <input type="text" id="fontR"><br>
+		font G: <input type="text" id="fontG"><br>
+		font B: <input type="text" id="fontB"><br><br>
+
+		borderW: <input type="text" id="borderW"><br><br>
+		border R: <input type="text" id = "borderR"><br>
+		border G: <input type="text" id = "borderG"><br>
+		border B: <input type="text" id = "borderB"><br>
+		<button onclick ="changeColors()">Submit</button>
 </body>
 
-<script src="prac2.js"></script>
-<noscript>JavaScript must be enabled to view the full site</noscript>
+
 
 </html>
