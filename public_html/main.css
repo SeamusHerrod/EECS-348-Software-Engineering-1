@@ -1,0 +1,149 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --light: rgb(237, 192, 78);
+    --dark: rgb(50, 45, 184);
+}
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: 'SF Mono';
+}
+.toDo {
+    position: relative;
+    top: 300px;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    border: 2px solid blue;
+}
+ul {
+    font-family: 'SF Mono';
+}
+li {
+    list-style: circle;
+}
+.list {
+    list-style: square;
+}
+#msg {
+    font-family: sans-serif;
+}
+
+#contactMe {
+    font-size: 12px;
+    color: rgb(22, 20, 56);
+    padding: 5px;
+    width:175px;
+    border: solid 1px grey;
+    background-color: blanchedalmond;
+}
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--dark);
+    --btnFontColor: var(--white);
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--light);
+    --btnFontColor: var(--black);
+}
+.theme-switch {
+    position:absolute;
+    font-size: 15px;
+    top: 0px;
+    left:75%;
+    height: 45px;
+    width: 100px;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+.aboutMe {
+    font-size: 15px;
+    position: relative;
+    top: 50px;
+    left: 5px;
+    width: 226px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.abtMe {
+    font-size: 20px;
+}
+.profileImg {
+    position: relative;
+    top: 50px;
+    padding: 5px;
+    width: 250px;
+    height: 300px;
+
+}
+
+.collapsible {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 125px;
+    border: 2px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color:  rgb(197, 197, 197);
+}
+
+.content {
+    padding: none;
+    font-size: 15px;
+    text-align: center;
+    display: none;
+    overflow: hidden;
+    width: 125px;
+    background-color: white
+}
+/*style side links section */
+.links {
+    position: absolute;
+    background-color: #04AA6D;
+    top: 20%;
+    left: 80%;
+    border: 2px solid black;
+    width: 125px;
+
+}
+
+.topnav {    
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnav a:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.video {
+   position: fixed;
+   top: 250px;
+   left: 35%; 
+
+
+}
