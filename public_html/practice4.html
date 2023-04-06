@@ -1,0 +1,41 @@
+<html>
+	<head>Practice 4:</head><br>
+
+	<style>
+		table {
+			border: 3px solid black;
+		      }
+	</style>
+
+	<body>
+		<form method = "GET">
+			Enter a positive number: <input type = "text" name="number">
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+
+
+
+
+<?php
+    $num = intval($_GET["number"]);
+    echo '<table>'
+    
+
+    for ($i=1; $i<=$num; $i++ )
+    {
+	print '<tr>';
+        for ( $j=1; $j<=$num; $j++ )
+        {
+            $p = $i * $j;
+	    echo "<td>$p</td> \n";
+	}
+        echo "</tr>";
+    }
+    
+    echo "</table>";
+
+
+?>
+
+</html>
