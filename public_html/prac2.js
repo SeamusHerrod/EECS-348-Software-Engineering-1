@@ -12,7 +12,7 @@ function changeColors(){
         var dummy = document.getElementById("dummyText");
 
         dummy.style.borderColor = `rgb(${borderR},${borderG},${borderB})`;
-        dummy.style.borderWidth = borderW;
+        dummy.style.borderWidth = borderW + "px";
         dummy.style.backgroundColor = `rgb(${fontR},${fontG},${fontB})`;
 }
 
